@@ -1,0 +1,107 @@
+/* ===== Global Reset & Font ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Background & Center Layout ===== */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #33a605da, #ed0691c5);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ===== Main Container ===== */
+.container {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #f9d342;
+  letter-spacing: 2px;
+  animation: glow 2s infinite alternate;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+/* ===== Countdown Timer Boxes ===== */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 90px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #f9d342, 0 0 20px #f9d342;
+  }
+  50% {
+    text-shadow: 0 0 20px #f39c12, 0 0 30px #f9d342;
+  }
+}
